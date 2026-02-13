@@ -3,7 +3,7 @@ spring:
     mongodb:
       uri: ${MONGODB_URI}
       database: ${DATABASE}
-#uri: mongodb+srv://deepakpanigrahi33_db_user:fOuQIPQTbzCHpQ3y@user-data.tut1mic.mongodb.net/?appName=user-data
+#
   #  h2:
   #    console:
   #      enabled: true
@@ -52,4 +52,5 @@ logging:
   logback:
     rollingpolicy:
       max-file-size: 5MB
+
       max-history: 7
