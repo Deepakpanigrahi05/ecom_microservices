@@ -1,0 +1,55 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+      database: ${DATABASE}
+#uri: mongodb+srv://deepakpanigrahi33_db_user:fOuQIPQTbzCHpQ3y@user-data.tut1mic.mongodb.net/?appName=user-data
+  #  h2:
+  #    console:
+  #      enabled: true
+  #  datasource:
+  #    url: jdbc:h2:mem:test
+  #    jpa:
+  #      show-sql: true
+  #      hibernate:
+  #        ddl-auto: create
+  #  datasource:
+  #    url: jdbc:postgresql://localhost:5432/userdb
+  #    username: postgres
+  #    password: admin
+  #  jpa:
+  #    database: POSTGRESQL
+  #    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  #    show-sql: true
+  #    hibernate:
+  #      ddl-auto: update
+
+  #  spring.datasource.url = jdbc:postgresql://localhost:5432/ecomdb
+  #  spring.datasource.username=postgres
+  #  spring.datasource.password=admin
+  #  spring.jpa.database=POSTGRESQL
+  #  spring.jpa.show-sql=true
+  #  spring.jpa.hibernate.ddl-auto=update
+  #  spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8082
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+    register-with-eureka: true
+    fetch-registry: true
+
+logging:
+  level:
+    root: INFO
+    com.ecommerce.user: TRACE
+  file:
+    name: ./log/${spring.application.name}.log
+  logback:
+    rollingpolicy:
+      max-file-size: 5MB
+      max-history: 7

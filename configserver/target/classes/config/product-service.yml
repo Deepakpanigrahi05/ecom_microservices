@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: ${DB_URI}
+    username: ${USER_NAME}
+    password: ${PASSWORD}
+  jpa:
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format-sql: true
+
+#  h2:
+#    console:
+#      enabled: true
+#  datasource:
+#    url: jdbc:h2:mem:test
+#    jpa:
+#      show-sql: true
+#      hibernate:
+#        ddl-auto: create
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+    register-with-eureka: true
+    fetch-registry: true
